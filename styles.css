@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Regular-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Italic-webfont.woff') format('woff');
+  font-style: italic;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('Roboto-Bold-webfont.woff') format('woff');
+  font-style: normal;
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --colore-intestazione: #003459;
+  --testo-intestazione: #FFFFFF;
+  --sfondo-articoli: #D8D8D8;
+  --testo-articoli: #00171F;
+  --testo-titolo: #003459;
+  --colore-speciale: #007EA7;
+}
+
+em {
+  font-style: italic;
+  color: var(--colore-speciale);
+}
+
+strong {
+  font-weight: bold;
+  color: var(--colore-speciale);
+}
+
+/*.open-sans {
+  font-family: 'Open Sans', sans-serif;
+}*/
+
+/* ---------- [PRINCIPALE] ---------- */
+body {
+  background-color: white;
+  font-family: 'Roboto', sans-serif;
+  font-size: 17.5px;
+}
+
+.page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+p:last-of-type {
+  margin-bottom: 0px;
+}
+
+/* ---------- [HEADER] ---------- */
+
+.header {
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--colore-intestazione);
+  color: var(--testo-intestazione);
+  position: fixed;
+}
+
+/* ---------- [TIMELINE] --------- */
+
+.timeline {
+  width: 600px;
+  margin: 0px;
+  margin-top: 100px;
+}
+
+.box {
+  border-top: 2px dashed;
+  margin: 0px 10px 0px 10px;
+  padding: 15px;
+}
+
+.box:nth-child(even) {
+  border-left: 2px dashed;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  margin-right: 30px;
+  padding-right: 0;
+}
+
+.box:nth-child(odd) {
+  border-right: 2px dashed;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-left: 30px;
+  padding-left: 0;
+}
+
+.box:first-child {
+  border-top: 0;
+  border-top-right-radius:0;
+  border-top-left-radius:0;
+}
+
+.box:last-child {
+  border-bottom-right-radius:0;
+  border-bottom-left-radius:0;
+}
+
+.article {
+  background-color: var(--sfondo-articoli);
+  color: var(--testo-articoli);
+  padding: 22.5px 20px 20px 20px;
+  border-radius: 30px;
+}
+
+.title {
+  margin-left: 20px;
+  margin-bottom: -15px;
+  color: var(--testo-titolo);
+}
+
+/* ---------- [FORMAZIONE] ---------- */
+
+.formazione {
+  border: 1.5px dashed white;
+  border-radius: 30px;
+  padding: 20px 17.5px 17.5px 17.5px;
+}
+
+.data {
+  text-align: right;
+  margin-top: 5px;
+  margin-right: 30px;
+  margin-bottom: -12.5px;
+  color: var(--testo-titolo);
+}
+
+/* --------- [CONOSCENZE] --------- */
+
+.conoscenze {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.skill {
+  width: auto;
+  border: 1.5px dashed white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 30px;
+}
+
+/* ---------- [CONTATTI] ---------- */
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.campo {
+  width: 100%;
+  height: 50px;
+  border: 1.5px dashed var(--sfondo-articoli);
+  padding: 20px;
+  border-radius: 30px;
+  outline: none;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.testo {
+  min-height: 300px;
+  resize: none;
+}
+
+.etichette {
+  text-align: left;
+  margin-right: 30px;
+  color: var(--testo-titolo);
+}
+
+.button {
+  width: 200px;
+  height: 50px;
+  border: 1.5px dashed white;
+  border-radius: 30px;
+  background-color: var(--colore-speciale);
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  margin: 0px auto;
+  margin-top: 10px;
+}
+
+.button:hover {
+  outline: none;
+}
+
+/* --------- [SOCIAL] --------- */
+
+.social {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.facebook,
+.linkedin,
+.instagram,
+.twitter {
+  width: 15%;
+}
+
+/* ---------- [MEDIA QUERY] ---------- */
+
+/* Mobile Styles */
+@media only screen and (max-width: 500px) {
+  body {
+  }
+}
+
+/* Tablet Styles */
+@media only screen and (min-width: 501px) and (max-width: 960px) {
+  body {
+  }
+}
+
+/* Desktop Styles */
+@media only screen and (min-width: 961px) {
+  body {
+  }
+}
